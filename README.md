@@ -10,7 +10,7 @@ This is the Repository containing the Dictionaries for the [MythicMC Price Index
 You can also visit the [Developer Updates](https://github.com/Price-Index/.github/blob/main/profile/UPDATES.md) to find up to date information.
 
 > [!CAUTION]
-> This dictionary may not be complete, if you find some missing values please notify [@thevoxy](https://discordapp.com/users/967391331553013811) on discord.
+> This dictionaries may not be complete, if you find some missing values please notify [@thevoxy](https://discordapp.com/users/967391331553013811) on discord.
 
 ---
 
