@@ -2,7 +2,7 @@
   <img src="./docs/banner.png" alt="drawing" style="max-width: 100%; height: auto;">
 </a>
 
-# <p align="center"> Dictonary </p>
+# <p align="center"> Shop Log Parser Dictonary </p>
 
 ---
 
