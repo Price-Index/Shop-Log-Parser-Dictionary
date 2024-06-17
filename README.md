@@ -2,7 +2,7 @@
   <img src="./docs/banner.png" alt="drawing" style="max-width: 100%; height: auto;">
 </a>
 
-# <p align="center"> Dictonaries </p>
+# <p align="center"> Dictonary </p>
 
 ---
 
