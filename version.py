@@ -1,2 +1,2 @@
 ### NEEDS TO KEEP UPDATING
-version = 'v0.2'
+__version__ = 'v0.2'
