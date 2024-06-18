@@ -1,7 +1,7 @@
 name: Update version on tag
 
 on:
-  create:
+  push:
     tags:
       - 'v*'
 
@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.x
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+            python-version: 3.x
 
-    - name: Update version in version.py
-      run: |
-        VERSION=$(echo "${GITHUB_REF}" | sed 's/refs\/tags\/v//')
-        echo "__version__ = 'v$VERSION'" > version.py
+      - name: Update version in version.py
+        run: |
+            VERSION=$(echo "${GITHUB_REF}" | sed 's/refs\/tags\/v//')
+            echo "__version__ = 'v$VERSION'" > version.py
 
-    - name: Commit changes
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add version.py
-        git commit -m "Update version to v${{ github.ref_name }}"
-        git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+      - name: Commit changes
+        env:
+            GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add version.py
+            git commit -m "Update version to v${{ github.ref_name }}"
+            git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} HEAD:main
